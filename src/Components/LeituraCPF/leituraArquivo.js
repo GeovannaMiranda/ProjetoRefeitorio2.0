@@ -1,29 +1,39 @@
 const { validaCPF } = require('../../Util/validaCPF')
 const fs = require('fs');
 const readline = require('readline');
-
+const path = require('path');
 
 
 function readFileByLine(file) {
-    const fileStream = fs.createReadStream(file);
+
+    const fileStream =  fs.createReadStream(file);
     const rl = readline.createInterface({
         input: fileStream,
     });
     const usersOnFile = []
+
     
     rl.on('line', (line, err, data) => {
         const campos = line.split(' ');
 
         var x = campos[0]
         let cpfinvalido = validaCPF(x)
-        if(cpfinvalido != undefined)
-        fs.appendFile('cpfIncorreto.txt', "\n" + cpfinvalido , function (err) {
+        if(cpfinvalido !== undefined)
+        // fs.appendFile('cpfIncorreto.txt', "\n" + cpfinvalido , function (err) {
           
-            if (err) {
-                throw err;
-            }
+        //     if (err) {
+        //         throw err;
+        //     }
+        // })
+        
+        fs.appendFile(path.join(__dirname ,"../Arquivostxt/cpfIncorreto.txt"),"\n" + cpfinvalido,
 
-        })
+            function (err) {
+                if (err) {
+                    throw err;
+                } 
+        });
+
         const user = {
             CPF: campos[0],
             NOME: campos.slice(1).join(' ').trim()
@@ -55,6 +65,7 @@ function readFileByLine(file) {
     })
 
 
-    readline.clearScreenDown
+   readline.clearScreenDown
 }
 readFileByLine('listaFuncionario.txt')
+
