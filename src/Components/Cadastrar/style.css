@@ -108,6 +108,7 @@ input:focus{
         border-right: none;
         border-bottom-color: #00652e;
         background-color: none;
+        font-size: 18px;
         
     }
     .campos2{
@@ -163,7 +164,7 @@ input:focus{
     .card-principal{
         display: grid;
         justify-content: center;
-        margin-top: 3rem;
+        margin-top: 6rem;
         margin-left: 2rem;
     }
     .Campos{
@@ -180,6 +181,7 @@ input:focus{
         border-right: none;
         border-bottom-color: #00652e;
         background-color: none;
+        font-size: 18px;
         
     }
     .campos2{

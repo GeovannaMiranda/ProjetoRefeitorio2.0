@@ -2,8 +2,10 @@ import { event } from "jquery";
 import React, { useEffect, useState } from "react";
 import logo from '../img/logotora75x72.png';
 import style from '../Menu/style.css';
+import { NavbarBrand } from "reactstrap";
 import MaterialIcons from 'material-icons';
 function Menusuperior() {
+
 
 
     const [isNavExpanded, setIsNavExpanded] = useState(false)
@@ -16,8 +18,8 @@ function Menusuperior() {
 
 
     return (
-        <div id="header">
-            <img href="" id='logo' src={logo} ></img>
+        <div id="header">           
+            <NavbarBrand href="/" ><img src={logo} alt="Logo Tora" id='logo'  /></NavbarBrand>
             <nav id="nav" className={isNavExpanded ? "active" : "inactive"}>
                 <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false" onClick={() => {setIsNavExpanded(!isNavExpanded); }}><span id="hamburguer"></span></button>
                 <ul id="menu" role="menu"  >

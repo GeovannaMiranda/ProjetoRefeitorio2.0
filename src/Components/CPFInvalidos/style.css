@@ -1,5 +1,6 @@
 body{
     font-family: sans-serif;
+    overflow: none;
 }
 #estilo-card-gerar-lista{
     background-color: #ffffff;
@@ -57,6 +58,7 @@ body{
     border-width: 2px;
     text-align: center;
     overflow: auto;
+    font-size: 23px;
 }
 #estilo-textarea:hover{
     text-decoration: none;
@@ -192,6 +194,7 @@ body{
     }
     .card-gerar{
         margin-left: 2rem;
+        margin-top: 6rem;
     }
     #titulo-gerar-cpf{
         font-size: 24px;
@@ -237,8 +240,9 @@ body{
         border-radius: 30px;
         border-color: #00652e;
         border-width: 2px;
-        text-align: center;
+        align-items: center;
         overflow: auto;
+        font-size: 22px;
     }
     #estilo-textarea:hover{
         text-decoration: none;
@@ -274,6 +278,7 @@ body{
         justify-content: center;
         align-items: center;
         margin-top: 1rem;
+
     }
     
 }

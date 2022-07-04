@@ -2,9 +2,11 @@ const { validaCPF } = require('../../Util/validaCPF')
 const fs = require('fs');
 const readline = require('readline');
 const path = require('path');
+const {SalvaTxt} = require('../CPFInvalidos/gerarlistatxt');
 
 
 function readFileByLine(file) {
+
 
     const fileStream =  fs.createReadStream(file);
     const rl = readline.createInterface({
@@ -48,7 +50,7 @@ function readFileByLine(file) {
         console.log(Response)
 
         const verificaArquivo = 'cpfIncorreto.txt';
-
+        
         if (fs.existsSync(verificaArquivo) ) {
             return console.log("O Arquivo já existe")
         }
@@ -58,7 +60,6 @@ function readFileByLine(file) {
                 if (err) {
                     throw err;
                 }
-                //console.log("Arquivo criado");
             })
         }
 

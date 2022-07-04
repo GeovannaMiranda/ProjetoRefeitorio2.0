@@ -167,7 +167,8 @@ input:focus{
 @media (max-width: 600px){
     body{
         background: #00652e;
-        font-family: sans-serif;
+        font-family: sans-serif;       
+        overflow: none;
     }
     #titulo-consulta{
         font-size: 32px;

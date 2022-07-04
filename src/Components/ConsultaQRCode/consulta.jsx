@@ -4,8 +4,7 @@ import { Button } from "@material-ui/core";
 import style from '../ConsultaQRCode/style.css';
 import jsPDF from 'jspdf';
 import autoTable  from 'jspdf-autotable'
-import Menu from '../MenuSuperior/menu.jsx';
-
+import Menu from '../Menu/menusuperior';
 function Consulta() {
 
 
@@ -59,9 +58,7 @@ function Consulta() {
 
     return (
         <div>
-            <div >
-               <Menu/>
-            </div >
+            <Menu/>     
             <Card id="estilo-card" className="card-principal">
                 <div className="Campos">
                     <p id='titulo-consulta'><strong>Consulta QR Code</strong></p>
