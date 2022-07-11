@@ -59,8 +59,10 @@ body{
     text-align: center;
     font-size: 17px;
     resize: none;
-    background-image: url("../img/yWNH7.png");
-    font-size: 21px;
+    line-height: 32.8px;
+    padding: 8px 5px;
+    background-image: linear-gradient(to right, white 10px, transparent 10px), linear-gradient(to left, white 8px, transparent 10px), repeating-linear-gradient(white, white 30px, #00652E 33px, #00652E 33px, #00652E 33px);
+    font-size: 22px;
 
 }
 #estilo-textarea:hover{
@@ -156,6 +158,9 @@ body{
         height: 27rem;
         border-radius: 30px;
         border-color: #00652e;
+        background-image: linear-gradient(to right, white 10px, transparent 10px), linear-gradient(to left, white 8px, transparent 10px), repeating-linear-gradient(white, white 30px, #00652E 33px, #00652E 33px, #00652E 33px);
+        line-height: 32.8px;
+        padding: 8px 5px;
         border-width: 2px;
         overflow: auto;
     
@@ -257,7 +262,7 @@ body{
         line-height: 32.8px;
         padding: 8px 5px;
         text-align: start;
-        border-radius: 5px;
+        border-radius: 30px;
         font-size: 21px;
 
     }
@@ -282,7 +287,7 @@ body{
     }
     .botao-salvarlista{
         justify-self: center;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
     #Rodape-estilo{
         height: 3rem;

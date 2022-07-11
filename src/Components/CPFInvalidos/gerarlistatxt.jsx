@@ -1,10 +1,15 @@
 import React from "react";
 import { Button, Card, Input } from "reactstrap";
 import style from './style.css';
-import Menu from '../Menu/menusuperior'
-import MaterialIcons from 'material-icons';
+import Menu from '../Menu/menusuperior';
+
+
+
 
 function GerarLista() {
+
+
+
 
     //Função Gerar Lista de CPF's Inválidos
     function loadDoc() {
@@ -21,24 +26,26 @@ function GerarLista() {
 
 
     //Função Para salvar Arquivo txt de CPF's invalidos corrigidos
-    var txt = 'CPFCorrigido';
+    // let SalvaTxt = function(){
+    //     let resposta = document.getElementById('estilo-textarea').value.trim();
+    //     resposta.split(/\s+/);
 
+    //     console.log(resposta);
 
-   function SalvaTxt() {
-        var resposta = document.getElementById('estilo-textarea').value.trim();
+    // }  
+
+    function SalvaTxt(txt = "CPFCorrigido"){
+        let resposta = document.getElementById('estilo-textarea').value.trim();
         txt = resposta.split(/\s+/);
 
         console.log(txt);
-       
-       
-        var CPFvalidado = resposta.replace('../LeituraCPF/cpfIncorreto.txt',resposta)
-        console.log(CPFvalidado);
-    }
-   
-
-   
-   
+        
+    }  
   
+
+
+    
+
     return (
         <div>
             <div>
@@ -49,16 +56,14 @@ function GerarLista() {
                         <Button id="botao-cor-gerarlist" className="gerarlista" onClick={loadDoc}>Gerar Lista</Button>
                     </div>
                     <div className="linha2-textarea">
-                        <Input  cols="20" rows="50" type="textarea" placeholder="Lista CPF's Inválidos " id="estilo-textarea" className="input-textarea"></Input>
+                        <Input  cols="20" rows="50" type="textarea"  id="estilo-textarea" className="input-textarea"></Input>
                         <Button id="estilo-botao-salvarcpf" className="botao-salvarlista" onClick={SalvaTxt}>Salvar</Button>
                     </div>
                 </Card>
 
 
             </div>
-            <div>
-                <footer id="Rodape-estilo" className="Rodape">REFEITORIO TORA 2.0</footer>
-            </div>
+            <><footer id="Rodape-estilo" className="Rodape">REFEITORIO TORA 2.0</footer></>
         </div>
     )
 }

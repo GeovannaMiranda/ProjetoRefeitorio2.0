@@ -24,6 +24,7 @@ function validaCPF(cpf) {
     '77777777777',
     '88888888888',
     '99999999999',
+    '12345678909',
   ].indexOf(strCPF) !== -1) {
     CPFinvalido = strCPF
     //console.log('CPF com números repetidos:', strCPF)

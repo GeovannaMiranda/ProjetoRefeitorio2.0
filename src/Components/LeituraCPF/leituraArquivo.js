@@ -3,8 +3,6 @@ const fs = require('fs');
 const readline = require('readline');
 const path = require('path');
 
-
-
 function readFileByLine(file) {
 
 
@@ -18,13 +16,14 @@ function readFileByLine(file) {
     rl.on('line', (line, err, data) => {
         const campos = line.split(' ');
 
+
         var x = campos[1]
         let ID = campos[0]
         let cpfinvalido = validaCPF(x)
         if(cpfinvalido !== undefined)      
 
      
-        fs.appendFile(path.join(__dirname ,"../../../public/cpfIncorreto.txt"),  "\nID:" + ID + "\t CPF: " + cpfinvalido,
+        fs.appendFile(path.join(__dirname ,"../../../public/cpfIncorreto.txt"), "\n\t" + ID + "\t " +  cpfinvalido,
 
             function (err) {
                 if (err) {
@@ -32,6 +31,15 @@ function readFileByLine(file) {
                 } 
 
         });
+
+        
+        // fs.writeFile('cpfIncorreto.txt', "\n"+ ID + "\n" + cpfinvalido , function (err) {
+          
+        //     if (err) {
+        //         throw err;
+        //     }
+        // })
+        
 
         const user = {
             ID: campos[0],
@@ -45,16 +53,16 @@ function readFileByLine(file) {
 
     rl.on('close', () => {
         const Response = usersOnFile.sort((a, b) => (a.NOME > b.NOME) - (a.NOME < b.NOME));
-        console.log(Response)
+        console.log(Response)     
 
-       
+      
         const verificaArquivo = 'cpfIncorreto.txt';
         
         if (fs.existsSync(verificaArquivo) ) {
             return console.log("O Arquivo já existe")
         }
         else {
-            fs.appendFile('cpfIncorreto.txt', "" , function (err) {
+            fs.appendFile('cpfIncorreto.txt', '', function (err) {
 
                 if (err) {
                     throw err;
