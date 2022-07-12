@@ -39,7 +39,7 @@ function GerarLista() {
         txt = resposta.split(/\s+/);
 
         console.log(txt);
-        
+      
     }  
   
 

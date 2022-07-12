@@ -260,6 +260,7 @@ body{
         background-attachment: local;
         background-image: linear-gradient(to right, white 10px, transparent 10px), linear-gradient(to left, white 8px, transparent 10px), repeating-linear-gradient(white, white 30px, #00652E 33px, #00652E 33px, #00652E 33px);
         line-height: 32.8px;
+
         padding: 8px 5px;
         text-align: start;
         border-radius: 30px;
