@@ -33,13 +33,6 @@ function readFileByLine(file) {
         });
 
         
-        // fs.writeFile('cpfIncorreto.txt', "\n"+ ID + "\n" + cpfinvalido , function (err) {
-          
-        //     if (err) {
-        //         throw err;
-        //     }
-        // })
-        
 
         const user = {
             ID: campos[0],
@@ -70,6 +63,8 @@ function readFileByLine(file) {
             })
             console.log("Arquivo Inexistente");
         }
+
+
 
     })
 
